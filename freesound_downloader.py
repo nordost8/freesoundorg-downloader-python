@@ -617,8 +617,6 @@ async def interactive_console(output_dir="downloads"):
     console.print()
     console.print("[cyan]💡 Direct URL example:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()
-    console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
-    console.print()
     
     loop = asyncio.get_event_loop()
     

@@ -650,42 +650,25 @@ async def interactive_console(output_dir="downloads"):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Freesound Downloader - download sounds from freesound.org",
+        description="Freesound Downloader - interactive console for downloading sounds from freesound.org",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Get cookies (first time)
-  python freesound_downloader.py --get-cookies
+  # Start interactive console
+  python freesound_downloader.py
 
-  # Download sound
-  python freesound_downloader.py 66717
-
-  # Download to specific directory
-  python freesound_downloader.py 66717 --output ./sounds
-
-  # Interactive console
-  python freesound_downloader.py --interactive
+  # Start with custom output directory
+  python freesound_downloader.py --output ./my_sounds
         """
     )
     
-    parser.add_argument('sound_id', type=int, nargs='?', help='Sound ID to download')
-    parser.add_argument('--get-cookies', action='store_true', help='Get cookies from browser')
-    parser.add_argument('--interactive', '-i', action='store_true', 
-                       help='Start interactive console')
     parser.add_argument('--output', '-o', default='downloads',
                        help='Output directory (default: downloads)')
     
     args = parser.parse_args()
     
-    if args.get_cookies:
-        get_cookies_interactive()
-    elif args.interactive or (not args.sound_id and not args.get_cookies):
-        # Start interactive console
-        asyncio.run(interactive_console(args.output))
-    elif args.sound_id:
-        download_sound(args.sound_id, args.output)
-    else:
-        parser.print_help()
+    # Always start interactive console
+    asyncio.run(interactive_console(args.output))
 
 if __name__ == "__main__":
     main()

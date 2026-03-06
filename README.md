@@ -135,58 +135,15 @@ This tool has been officially tested on the following systems:
 - ✅ **Ubuntu 24.04.3 LTS (Noble)** - Python 3.12.3, Linux kernel 6.17.0-14-generic
 - ✅ Cross-platform support (Windows, macOS, Linux) - should work on any system with Python 3.8+
 
-## AI Agent Friendly
+## AI Agent Friendly (Claude Code, Cursor...)
 
-This repository is optimized for AI coding assistants. The codebase is well-structured, documented, and follows best practices to make it easy for AI agents to understand and help with modifications.
+This repository is optimized for AI coding assistants with clean code structure and comprehensive documentation.
 
-### Claude Code (Anthropic)
+**Example prompt for your AI agent:**
 
-- ✅ Clean code structure with clear function names
-- ✅ Comprehensive docstrings and comments
-- ✅ Type hints where applicable
-- ✅ Modular design for easy extension
-
-**Example prompt for Claude Code:**
 ```
-I want to add bulk download functionality to this Freesound downloader. 
-The script currently downloads one sound at a time. Can you help me add 
-a feature to download multiple sounds from a list of URLs or IDs? 
-Please maintain the existing interactive console interface and add 
-a new command like "bulk" that accepts a file with URLs or IDs.
-```
-
-### Cursor AI
-
-- ✅ Consistent code style throughout
-- ✅ Clear separation of concerns
-- ✅ Well-documented authentication flow
-- ✅ Easy-to-understand error handling
-
-**Example prompt for Cursor AI:**
-```
-Add support for downloading entire sound packs from Freesound.org. 
-When a user provides a pack URL, the script should:
-1. Parse the pack page to extract all sound IDs
-2. Download each sound in the pack
-3. Organize them in a subfolder named after the pack
-4. Show progress for each download
-```
-
-### General AI Assistant Tips
-
-When working with this codebase, you can ask AI assistants to:
-- Add new features (bulk download, pack support, search integration)
-- Improve error handling or add retry logic
-- Optimize performance or add caching
-- Add new output formats or integrations
-- Improve the interactive console UI
-
-**Example general prompt:**
-```
-Help me add a configuration file feature to this downloader. Users should 
-be able to set default output directory, preferred browser, and other 
-settings in a config file. The script should load these settings on startup 
-and allow overriding via command-line arguments.
+Привіт Агенте, склонуй і запусти для мене це рішення:
+https://github.com/nordost8/freesoundorg-downloader-python
 ```
 
 ## License

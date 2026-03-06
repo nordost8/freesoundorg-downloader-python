@@ -156,4 +156,4 @@ To help with discovery: freesound downloader, python freesound client, freesound
 
 ---
 
-[![GitHub](https://img.shields.io/badge/GitHub-nordost8-181717?style=flat&logo=github)](https://github.com/nordost8)
+[![Telegram](https://img.icons8.com/color/48/000000/telegram-app.png)](https://t.me/nordost8)

@@ -501,7 +501,7 @@ async def download_sound_async(sound_id, output_dir="downloads", sound_url=None)
         if e.code == 404:
             print(f"❌ Sound {sound_id} not found.")
             print(f"   Check if the URL is correct: {page_url}")
-            print(f"   Example valid URL: https://freesound.org/people/troyane/sounds/233770/")
+            print(f"   Direct URL example: https://freesound.org/people/troyane/sounds/233770/")
         elif e.code in [401, 403]:
             print("⚠️  Authentication failed. Session may have expired.")
             # Clear cookies and re-authenticate
@@ -615,7 +615,7 @@ async def interactive_console(output_dir="downloads"):
         border_style="green"
     ))
     console.print()
-    console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
+    console.print("[cyan]💡 Direct URL example:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()
     console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()
@@ -668,8 +668,8 @@ async def interactive_console(output_dir="downloads"):
             
             if not sound_id:
                 console.print(f"[red]❌ Failed to recognize sound ID: {user_input}[/red]")
-                console.print("[yellow]💡 Enter URL or numeric sound ID[/yellow]")
-                console.print("[dim]Example URL: https://freesound.org/people/troyane/sounds/233770/[/dim]")
+                console.print("[yellow]💡 Enter direct URL or numeric sound ID[/yellow]")
+                console.print("[dim]Direct URL example: https://freesound.org/people/troyane/sounds/233770/[/dim]")
                 continue
             
             # Download sound

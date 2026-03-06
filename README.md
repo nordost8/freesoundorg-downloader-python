@@ -23,6 +23,21 @@ You are free to modify this code or integrate it into your own automation workfl
 
 ## Installation
 
+### Option 1: Quick Install (Recommended)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nordost8/freesoundorg-downloader-python.git
+   cd freesoundorg-downloader-python
+   ```
+
+2. Run the install script:
+   ```bash
+   ./install.sh
+   ```
+
+### Option 2: Manual Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/nordost8/freesoundorg-downloader-python.git
@@ -34,10 +49,18 @@ You are free to modify this code or integrate it into your own automation workfl
    pip install -r requirements.txt
    ```
 
-   Required packages:
-   - `nodriver` - Browser automation
-   - `prompt-toolkit` - Interactive console
-   - `rich` - Beautiful terminal output
+### Option 3: Install as Package (Advanced)
+
+```bash
+pip install -e .
+```
+
+This allows you to run `freesound-downloader` from anywhere.
+
+**Required packages:**
+- `nodriver` - Browser automation
+- `prompt-toolkit` - Interactive console
+- `rich` - Beautiful terminal output
 
 ## Usage
 

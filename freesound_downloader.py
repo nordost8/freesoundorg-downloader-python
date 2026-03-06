@@ -492,6 +492,12 @@ async def download_sound_async(sound_id, output_dir="downloads", sound_url=None)
     
     if not download_match:
         print("❌ Failed to find download link")
+        print("   Possible reasons:")
+        print("   - Sound requires login (session may have expired)")
+        print("   - Sound is not available for download")
+        print("   - Invalid URL or sound ID")
+        print(f"   Check URL: {page_url}")
+        print(f"   Example valid URL: https://freesound.org/people/troyane/sounds/233770/")
         return False
     
     download_url = download_match.group(1)
@@ -574,6 +580,8 @@ async def interactive_console(output_dir="downloads"):
         title="🎵 Freesound Downloader",
         border_style="green"
     ))
+    console.print()
+    console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()
     
     loop = asyncio.get_event_loop()

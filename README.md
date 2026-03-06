@@ -150,6 +150,8 @@ https://github.com/nordost8/freesoundorg-downloader-python
 
 **nordost8**
 
+[![Telegram](https://img.icons8.com/color/48/000000/telegram-app.png)](https://t.me/nordost8)
+
 - GitHub: [@nordost8](https://github.com/nordost8)
 - Repository: [Magic-FFT-audio-visualizer-py](https://github.com/nordost8/Magic-FFT-audio-visualizer-py)
 

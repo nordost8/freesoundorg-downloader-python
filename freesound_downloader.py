@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Freesound Downloader - automatic cookie acquisition and sound downloading
-Usage: python freesound_downloader.py <sound_id>
+Freesound Downloader - interactive console for downloading sounds from freesound.org
+Usage: python freesound_downloader.py
 """
 
 import sys

@@ -100,6 +100,13 @@ This is an independent tool, not affiliated with Freesound.org. For education/re
 - 🔍 **Search integration** - Search and download directly from console
 - 📊 **Download queue** - Manage multiple downloads with progress tracking
 
+## Tested Systems
+
+This tool has been officially tested on the following systems:
+
+- ✅ **Ubuntu 24.04.3 LTS (Noble)** - Python 3.12.3, Linux kernel 6.17.0-14-generic
+- ✅ Cross-platform support (Windows, macOS, Linux) - should work on any system with Python 3.8+
+
 ## License
 
 MIT License - see LICENSE file.

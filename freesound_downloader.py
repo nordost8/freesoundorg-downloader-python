@@ -633,6 +633,7 @@ async def interactive_console(output_dir="downloads"):
             if not sound_id:
                 console.print(f"[red]❌ Failed to recognize sound ID: {user_input}[/red]")
                 console.print("[yellow]💡 Enter URL or numeric sound ID[/yellow]")
+                console.print("[dim]Example URL: https://freesound.org/people/troyane/sounds/233770/[/dim]")
                 continue
             
             # Download sound

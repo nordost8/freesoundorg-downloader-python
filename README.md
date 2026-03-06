@@ -142,7 +142,7 @@ This repository is optimized for AI coding assistants with clean code structure 
 **Example prompt for your AI agent:**
 
 ```
-Привіт Агенте, склонуй і запусти для мене це рішення:
+Hi Agent, clone and open a console with the command to run this solution:
 https://github.com/nordost8/freesoundorg-downloader-python
 ```
 

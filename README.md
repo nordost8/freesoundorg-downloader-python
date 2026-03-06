@@ -12,7 +12,7 @@ You are free to modify this code or integrate it into your own automation workfl
 
 ## Key Features
 
-- ✅ Secure auth via default browser (no API token required)
+- ✅ Secure auth via Chromium-based browser (Chrome, Edge, Brave) - no API token required
 - ✅ No extra drivers or Selenium needed
 - ✅ Session saving for reuse
 - ✅ API support with delays for fair use
@@ -48,10 +48,12 @@ You are free to modify this code or integrate it into your own automation workfl
    ```
 
 2. **First-time authentication:**
-   - Browser will open automatically
+   - Chromium-based browser (Chrome, Edge, or Brave) will open automatically
    - Log in to Freesound.org in the browser window
    - Script detects successful login and closes browser
    - Session is saved for future use
+   
+   **Note:** Requires a Chromium-based browser (Chrome, Edge, Brave, or Chromium). Firefox and Opera are not supported.
 
 3. **Find a sound on Freesound.org:**
    - Open [freesound.org](https://freesound.org) in your browser

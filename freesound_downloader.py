@@ -476,9 +476,43 @@ async def download_sound_async(sound_id, output_dir="downloads", sound_url=None)
     try:
         with urllib.request.urlopen(req) as response:
             html = response.read().decode('utf-8')
+            response_url = response.geturl()
+            
+            # Check if redirected to login (session expired)
+            if 'login' in response_url.lower() or ('login' in html.lower()[:1000] and 'logout' not in html.lower()):
+                print("⚠️  Session expired. Re-authenticating...")
+                # Clear invalid cookies
+                if os.path.exists(COOKIE_FILE):
+                    os.remove(COOKIE_FILE)
+                if os.path.exists(SESSION_FILE):
+                    os.remove(SESSION_FILE)
+                # Re-authenticate
+                cookies = await ensure_authenticated()
+                if not cookies:
+                    return False
+                # Retry with new cookies
+                req = urllib.request.Request(page_url)
+                req.add_header('Cookie', cookies)
+                req.add_header('User-Agent', 'Mozilla/5.0')
+                req.add_header('Referer', 'https://freesound.org/')
+                response = urllib.request.urlopen(req)
+                html = response.read().decode('utf-8')
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            print(f"❌ Sound {sound_id} not found. Check ID or URL.")
+            print(f"❌ Sound {sound_id} not found.")
+            print(f"   Check if the URL is correct: {page_url}")
+            print(f"   Example valid URL: https://freesound.org/people/troyane/sounds/233770/")
+        elif e.code in [401, 403]:
+            print("⚠️  Authentication failed. Session may have expired.")
+            # Clear cookies and re-authenticate
+            if os.path.exists(COOKIE_FILE):
+                os.remove(COOKIE_FILE)
+            if os.path.exists(SESSION_FILE):
+                os.remove(SESSION_FILE)
+            cookies = await ensure_authenticated()
+            if cookies:
+                print("✅ Re-authenticated. Please try downloading again.")
+            return False
         else:
             print(f"❌ HTTP error {e.code}: {e.reason}")
         return False
@@ -580,6 +614,8 @@ async def interactive_console(output_dir="downloads"):
         title="🎵 Freesound Downloader",
         border_style="green"
     ))
+    console.print()
+    console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()
     console.print("[cyan]💡 Example URL:[/cyan] [dim]https://freesound.org/people/troyane/sounds/233770/[/dim]")
     console.print()

@@ -108,6 +108,18 @@ This allows you to run `freesound-downloader` from anywhere.
 python freesound_downloader.py --output ./my_sounds
 ```
 
+## Screenshot
+
+Here's a complete workflow example showing authentication and downloading sounds:
+
+![Screenshot](screenshot.png)
+
+The screenshot demonstrates:
+- Browser-based authentication flow
+- Interactive console with command history
+- Downloading sounds by URL or ID
+- Session persistence (cookies saved for reuse)
+
 ## How It Works
 
 1. Checks for saved session cookies

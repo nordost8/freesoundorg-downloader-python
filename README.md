@@ -152,7 +152,7 @@ MIT License - see LICENSE file.
 
 ## Search Keywords
 
-To help with discovery: freesound downloader, python freesound client, freesound api python, bulk audio downloader, freesound samples scraper, nodriver authentication, cookie-based freesound access, no token freesound tool
+To help with discovery: freesound org login bypass python, freesound org userbot, freesound bulk downloader, freesound automatic download, freesound high quality downloader, python freesound open-source api client, freesound script, freesound.org downloader without api key, freesound automate, freesound org scraper without api key, freesound python client, freesound opensource client, freesound download no api key
 
 ---
 
